@@ -1,28 +1,29 @@
 <!DOCTYPE HTML>
-<!--VERSION con Boton a 2da pagina
-    Eventually by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
     <head>
         <title>Eventually by HTML5 UP</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
+        <script>
+            function redirectToPage(event) {
+                event.preventDefault(); // Previene el envío del formulario
+                window.location.href = "requerimientos.html"; // Redirige a la página de requerimientos
+            }
+        </script>
     </head>
     <body class="is-preload">
 
         <!-- Header -->
             <header id="header">
                 <h1>Negocios Industriales</h1>
-                <p> Plataforma de colaboracion de compradores, proveedores y profesionales<br />
-                Industriales en México y el Mundo <a href="http://html5up.net"> Bienvenid@s </a>.</p>
+                <p>Un espacio de colaboración entre compradores, proveedores y profesionales <br />
+                del sector Industrial en México y el Mundo <a href="http://html5up.net"> Bienveni@s</a>.</p>
             </header>
 
         <!-- Signup Form -->
-            <form id="signup-form" method="post" action="requerimientos.html"> <!-- Modificada la acción -->
-                <input type="email" name="email" id="email" placeholder="Ingresar Email" />
+            <form id="signup-form" onsubmit="redirectToPage(event)"> <!-- Modificada la acción -->
+                <input type="email" name="email" id="email" placeholder="Tú Email" required />
                 <input type="submit" value="Entrar" />
             </form>
 
